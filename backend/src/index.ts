@@ -1,7 +1,8 @@
 import express from "express";
 import cors from "cors";
 import dotenv from "dotenv";
-import router from "./routes/ping";
+// import router from "./routes/ping.routes";
+import routes from "./routes"
 
 
 dotenv.config();  //.env variable load karta hai 
@@ -25,7 +26,7 @@ app.use(express.json());
 
 
 //routes
-app.use("/ping",router);
+app.use("/api",routes);
 
 
 //start server
